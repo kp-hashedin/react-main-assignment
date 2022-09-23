@@ -1,0 +1,21 @@
+
+.header {
+    padding: 1.5em;
+    background-color: #212121;
+    color: whitesmoke;
+}
+
+.title {
+    font-size: 2em;
+    margin-left: 30px;
+    margin-right: 4em;
+    cursor: pointer;
+}
+
+.home {
+    cursor: pointer;
+}
+
+.home:hover {
+    font-size: 1.3em;
+}
