@@ -1,0 +1,36 @@
+.profileImage {
+    border-radius: 10px;
+    box-shadow: rgba(39, 39, 39, 0.35) 0px 5px 15px;
+}
+
+.left-container {
+    display: flex;
+    width: 40%;
+    height: 600px;
+    display: inline-flex;
+    margin-left: 10em;
+    margin-top:50px;
+}
+
+.right-container {
+    float: right;
+    display: flex;
+    width: 40%;
+    height: auto;
+    display: inline;
+    margin-top:50px;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .left-container {
+      margin-left: 1.5em;
+      width: 50%;
+    }
+    .right-container {
+        float: none;
+        margin-left: 1.5em;
+    }
+  }
