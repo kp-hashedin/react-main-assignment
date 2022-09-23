@@ -6,5 +6,5 @@
 3. npm start
 
 
-##live link 
+## Live Demo
 https://react-hashedin.web.app/   :rocket:
