@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Profile.css";
 import TextCard from "./TextCard";
+import Error from "../Error";
 
 const Profile = () => {
   const [characterDetails, setCharacterDetails] = useState({});
   const params = useParams();
   const [isDataFetced, setIsDataFetched] = useState(false);
+  const [checkForNotFound, setCheckForNotFound] = useState(false);
   useEffect(() => {
     fetch(
       `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${params.profile_id}.json`
@@ -18,6 +20,7 @@ const Profile = () => {
       })
       .catch((err) => {
         console.log(err);
+        setCheckForNotFound(true);
       });
   });
 
@@ -62,7 +65,9 @@ const Profile = () => {
           </div>
         </div>
       )}
-      {!isDataFetced && <h1>Content is loading...</h1>}
+
+      {checkForNotFound && <Error />} 
+      {!isDataFetced && !checkForNotFound && <h1>Content is loading...</h1>}
     </div>
   );
 };
